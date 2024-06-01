@@ -1,3 +1,3 @@
-# Simple Chat
-An online support chat template built with HTML, CSS and JavaScript.
+# Monolog
+An online support solo chat template built with React.
 * You can type messages and send them to the conversation through EventListeners.
