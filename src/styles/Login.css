@@ -65,6 +65,7 @@ form input {
 }
 
 form button {
+  flex-grow: 1;
   margin: 10px auto;
   font-size: 20px;
   border: none;
@@ -72,13 +73,7 @@ form button {
   background-color: #1e1c26;
   color: #eeecfa;
   padding: 10px;
-  transition: all 0.25s;
   width: 100%;
-}
-
-form button:hover {
-  background-color: #2d77fd;
-  color: #eeecfa;
 }
 
 .label_input {
@@ -87,7 +82,33 @@ form button:hover {
 }
 
 #link {
+  display: flex;
   margin: auto;
   text-align: center;
-  width: 100%;
+  width: 25%;
+}
+
+#link button:hover {
+  background-color: #894ec9;
+  color: #eeecfa;
+  transition: all 0.5s ease;
+}
+
+form button:focus {
+  outline: none;
+}
+
+
+h1.logo {
+  font-size: 2.5em;
+  color: #eeecfa;
+  text-shadow: 2px 2px 4px #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.5s ease;
+}
+
+h1.logo:hover {
+  color: #9e6fcf;
+  text-shadow: 0 0 10px #9e6fcf, 0 0 20px #9e6fcf, 0 0 30px #9e6fcf, 0 0 40px #9e6fcf;
 }

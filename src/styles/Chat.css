@@ -19,13 +19,15 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 
 /* prettier-ignore */
 ol, ul {
-    list-style: none;
-  }
+  list-style: none;
+}
 
 img {
   max-width: 100%;
   height: auto;
 }
+
+/* START */
 
 #chat-screen {
   display: flex;
@@ -44,8 +46,6 @@ img {
   padding: 5px;
 }
 
-/* START */
-
 * {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
@@ -59,6 +59,21 @@ header {
   color: #eeecfa;
   text-align: center;
   padding: 20px;
+}
+
+h1.logo {
+  font-size: 2.5em;
+  color: #eeecfa;
+  text-shadow: 2px 2px 4px #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.5s ease;
+}
+
+h1.logo:hover {
+  color: #9e6fcf;
+  text-shadow: 0 0 10px #9e6fcf, 0 0 20px #9e6fcf, 0 0 30px #9e6fcf,
+    0 0 40px #9e6fcf;
 }
 
 .message-item {
@@ -97,17 +112,28 @@ header {
 
 .message-user .msg-chat {
   border-radius: 15px 0px 15px 15px;
-  background-color: #2d77fd;
+  background-color: #894ec9;
   color: #eeecfa;
 }
 
 form {
   display: flex;
-  background-color: #252331;
   justify-content: space-between;
+  background-color: #252331;
+  border-radius: 0px 0px 20px 20px;
   width: 100%;
   gap: 7px;
   padding: 10px;
+}
+
+input {
+  border: 2px solid transparent;
+}
+
+input:focus {
+  outline: none;
+  border-color: #343145;
+  transition: 0.2s ease-in-out;
 }
 
 form input {
@@ -115,6 +141,8 @@ form input {
   flex-grow: 1;
   border: none;
   background-color: #1e1c26;
+  transition: all 1s ease-in-out;
+  border: 2px solid transparent;
   color: #eeecfa;
   border-radius: 10px;
   padding: 15px;
@@ -123,18 +151,26 @@ form input {
 
 form button {
   font-size: 20px;
-  border: none;
   border-radius: 10px;
   background-color: #1e1c26;
   color: #eeecfa;
   padding: 12px;
   width: 25%;
-  transition: all 0.25s;
 }
 
 form button:hover {
-  background-color: #2d77fd;
-  color: #eeecfa;
+  background-color: #894ec9;
+  transition: 0.25s ease-in-out;
+}
+
+form button:active {
+  background-color: #894ec9;
+  transform: scale(0.95);
+  transition: 0.1s ease-in-out;
+}
+
+form button:focus {
+  outline: none;
 }
 
 .messages-list {

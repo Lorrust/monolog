@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import { useState } from 'react';
 // import './App.css';
 
@@ -7,15 +7,14 @@ import Chat from './routes/Chat';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Login />,
   },
   {
-    path: '/chat',
+    path: "/chat",
     element: <Chat />,
   },
-],
-);
+]);
 
 export default function App() {
   return <RouterProvider router={router} />;

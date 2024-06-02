@@ -13,9 +13,9 @@ export default function Login() {
   return (
     <div id="container">
       <header>
-        <h1>Monolog</h1>
+        <h1 className='logo'>Monolog</h1>
       </header>
-      <p><em>Your private echo chamber.</em></p>
+      <p>Your private echo chamber.</p>
       <form onSubmit={handleLogin}>
         <input type="text" id="username_input" placeholder='Pick an username' required />
         <Link id='link' to={{ pathname: "/chat", state: { username: username } }}>
