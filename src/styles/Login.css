@@ -1,0 +1,93 @@
+html {
+  background-color: #1e1f27;
+}
+
+* {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #1e1f27;
+}
+
+#container {
+  align-content: center;
+  color: #eeecfa;
+  background-color: #252331;
+  border-radius: 20px;
+  width: 500px;
+  height: 400px;
+  margin: 100px auto;
+  padding: 10px;
+}
+
+header {
+  margin: auto;
+  text-align: center;
+  max-width: fit-content;
+  font-size: 24px;
+  color: #eeecfa;
+  padding: 10px 10px 0px 10px;
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+  padding: 0px 10px 10px 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+form label {
+  padding: 0px 0px 3px 6px;
+}
+
+form input {
+  font-size: 16px;
+  margin: 10px auto;
+  border: none;
+  background-color: #1e1c26;
+  color: #eeecfa;
+  border-radius: 10px;
+  flex-grow: 1;
+  padding: 7px;
+  width: 50%;
+}
+
+form button {
+  margin: 10px auto;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #1e1c26;
+  color: #eeecfa;
+  padding: 10px;
+  transition: all 0.25s;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #2d77fd;
+  color: #eeecfa;
+}
+
+.label_input {
+  display: flex;
+  flex-direction: column;
+}
+
+#link {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}

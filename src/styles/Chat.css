@@ -1,0 +1,164 @@
+/* RESET CSS */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* prettier-ignore */
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/* prettier-ignore */
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+
+/* prettier-ignore */
+ol, ul {
+    list-style: none;
+  }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#chat-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #252331;
+  border-radius: 20px 20px 0px 0px;
+  width: 600px;
+  height: 500px;
+  margin: auto;
+  overflow: auto;
+}
+
+.msg-chat {
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* START */
+
+* {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #1e1f27;
+}
+
+header {
+  font-size: 24px;
+  color: #eeecfa;
+  text-align: center;
+  padding: 20px;
+}
+
+.message-item {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.msg-user {
+  color: #eeecfa;
+  padding: 0px 0px 4px 0px;
+}
+
+.msg-chat {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 0px 15px 15px 15px;
+  max-width: 50%;
+}
+
+.message-item .msg-chat {
+  align-items: flex-start;
+  display: flex;
+  color: #eeecfa;
+  background-color: #343145;
+}
+
+.message-user {
+  align-items: flex-end;
+  color: #eeecfa;
+}
+
+.message-user .msg-chat {
+  border-radius: 15px 0px 15px 15px;
+  background-color: #2d77fd;
+  color: #eeecfa;
+}
+
+form {
+  display: flex;
+  background-color: #252331;
+  justify-content: space-between;
+  width: 100%;
+  gap: 7px;
+  padding: 10px;
+}
+
+form input {
+  font-size: 16px;
+  flex-grow: 1;
+  border: none;
+  background-color: #1e1c26;
+  color: #eeecfa;
+  border-radius: 10px;
+  padding: 15px;
+  width: 75%;
+}
+
+form button {
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #1e1c26;
+  color: #eeecfa;
+  padding: 12px;
+  width: 25%;
+  transition: all 0.25s;
+}
+
+form button:hover {
+  background-color: #2d77fd;
+  color: #eeecfa;
+}
+
+.messages-list {
+  max-height: 500px;
+  max-width: 600px;
+  overflow-x: hidden;
+}
+
+/* SCROLLBAR */
+
+/* Width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: auto;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #252331;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #343145;
+  border-radius: 10px;
+}
