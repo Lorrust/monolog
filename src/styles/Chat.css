@@ -105,11 +105,13 @@ h1.logo:hover {
   background-color: #343145;
 }
 
+/* Other's message */
 .message-user {
   align-items: flex-end;
   color: #eeecfa;
 }
 
+/* User's message */
 .message-user .msg-chat {
   border-radius: 15px 0px 15px 15px;
   background-color: #894ec9;

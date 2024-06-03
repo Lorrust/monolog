@@ -1,39 +1,55 @@
-import { useRef } from 'react';
-import { useLocation } from 'react-router-dom';
-import '../styles/Chat.css';
+import { useRef, useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import "../styles/Chat.css";
 
 export default function Chat() {
   const location = useLocation();
-  const username = location.state ? location.state.username : "You";
+  const [messages, setMessages] = useState([]);
+  const username = location.state ? location.state?.username : "You";
 
   const messageInput = useRef();
-  const messageList = useRef();
+  const chatScreen = useRef();
 
   const sendMessage = (event) => {
     event.preventDefault();
 
     if (messageInput.current.value.trim() !== "") {
-      const message = document.createElement("div");
-      message.classList.add("message-item", "message-user");
-      message.innerHTML = `<div class="msg-user"><strong>${username}</strong></div>
-      <div class="msg-chat">${messageInput.current.value}</div>`;
+      setMessages([
+        ...messages,
+        {
+          username: username,
+          message: messageInput.current.value,
+        },
+      ]);
 
-      messageList.current.appendChild(message);
       messageInput.current.value = "";
       messageInput.current.focus();
-
-      const chatScreen = document.getElementById("chat-screen");
-      chatScreen.scrollTop = chatScreen.scrollHeight;
     }
   };
+
+  useEffect(() => {
+    chatScreen.current.scrollTop = chatScreen.current.scrollHeight;
+  }, [messages]);
 
   return (
     <div>
       <header>
         <h1 className="logo">Monolog</h1>
       </header>
-      <div id="chat-screen">
-        <div ref={messageList}></div>
+      <div id="chat-screen" ref={chatScreen}>
+        <div>
+          {messages.map((item) => {
+            // cada "giro" do map é um item/mensagem impressa em tela...
+            return (
+              <div className="message-item message-user" key={item.message}>
+                <div className="msg-user">
+                  <strong>{item.username}</strong>
+                </div>
+                <div className="msg-chat">{item.message}</div>
+              </div>
+            );
+          })}
+        </div>
       </div>
       <form onSubmit={sendMessage}>
         <input
