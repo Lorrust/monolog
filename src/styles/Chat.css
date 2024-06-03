@@ -36,7 +36,7 @@ img {
   background-color: #252331;
   border-radius: 20px 20px 0px 0px;
   width: 600px;
-  height: 500px;
+  height: 300px;
   margin: auto;
   overflow: auto;
 }
@@ -58,7 +58,7 @@ header {
   font-size: 24px;
   color: #eeecfa;
   text-align: center;
-  padding: 20px;
+  padding-bottom: 20px;
 }
 
 h1.logo {
@@ -116,14 +116,15 @@ h1.logo:hover {
   color: #eeecfa;
 }
 
-form {
+#chat-form {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   background-color: #252331;
   border-radius: 0px 0px 20px 20px;
   width: 100%;
-  gap: 7px;
-  padding: 10px;
+  gap: 10px;
+  padding: 10px 10px 5px 10px;
 }
 
 input {

@@ -81,19 +81,6 @@ form button {
   flex-direction: column;
 }
 
-#link {
-  display: flex;
-  margin: auto;
-  text-align: center;
-  width: 25%;
-}
-
-#link button:hover {
-  background-color: #894ec9;
-  color: #eeecfa;
-  transition: all 0.5s ease;
-}
-
 form button:focus {
   outline: none;
 }
