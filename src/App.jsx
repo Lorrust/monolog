@@ -1,9 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import { useState } from 'react';
-// import './App.css';
 
-import Login from './routes/Login';
-import Chat from './routes/Chat';
+import Login from "./routes/Login";
+import Chat from "./routes/Chat";
 
 const router = createBrowserRouter([
   {
