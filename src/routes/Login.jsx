@@ -1,13 +1,18 @@
-import { useState } from 'react';
+import { useRef, useEffect } from 'react';
 import '../styles/Login.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
-  const [username, setUsername] = useState('');
+  const navigate = useNavigate();
+  const usernameInput = useRef();
+
+  useEffect(() => {
+    usernameInput.current.focus();
+  }, []);
 
   const handleLogin = (event) => {
     event.preventDefault();
-    setUsername(event.target.elements.username_input.value);
+    navigate('/chat', { state: { username: usernameInput.current.value } });
   };
 
   return (
@@ -17,10 +22,8 @@ export default function Login() {
       </header>
       <p>Your private echo chamber.</p>
       <form onSubmit={handleLogin}>
-        <input type="text" id="username_input" placeholder='Pick an username' required />
-        <Link id='link' to={{ pathname: "/chat", state: { username: username } }}>
+        <input type="text" ref={usernameInput} placeholder='Pick an username' />
           <button id="btn-login">Login</button>
-        </Link>
       </form>
     </div>
   );
