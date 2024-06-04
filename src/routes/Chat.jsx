@@ -19,8 +19,6 @@ export default function Chat() {
     event.preventDefault();
 
     if (messageInput.current.value.trim() !== "") {
-      // mantendo as mensagens atuais e adicionamos a nova mensagem...
-      // cada mensagem é estruturada em "quem escreveu" e "o que escreveu"
       setMessages([
         ...messages,
         {
